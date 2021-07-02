@@ -109,7 +109,6 @@ class Avl_tree(Binary_tree):
             root.count += 1
 
         b_val = super().get_height(root.left) - super().get_height(root.right)
-        #print(f'val: {x} b_val: {b_val}')
         if b_val == 2 and x < root.left.val: #left-left
             return self.right_rotation(root)
         elif b_val == 2 and x > root.left.val: #left-right
@@ -141,9 +140,3 @@ if __name__ == '__main__':
     mytree = Avl_tree()
     for i in x:
         mytree.root = mytree.insert(mytree.root, i)
-
-    mytree.preOrder(mytree.root)
-    print('')
-    mytree.delete(mytree.root, 8)
-    mytree.preOrder(mytree.root)
-
