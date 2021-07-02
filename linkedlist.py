@@ -39,7 +39,7 @@ class LinkedList:
     def insert_before_x(self, x, data):
         n = self.start_node
         if n == None:
-            print('List has no element')
+            print('List has no elements')
             return
 
         if x == self.start_node.val:
@@ -60,8 +60,8 @@ class LinkedList:
     def insert_at_index(self, i, data):
         n = self.start_node
         count = 0
-
         while n != None:
+            #index is the last + 1 element in the list
             if n.next == None and count + 1 == i:
                 self.insert_to_end(data)
                 break
@@ -123,7 +123,6 @@ class LinkedList:
                     n.next = n.next.next
                     break
                 n = n.next 
-            
             if n.next == None:
                 print(f'{x} not found in list')
     
